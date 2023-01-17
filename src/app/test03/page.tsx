@@ -6,6 +6,7 @@ export default function TestPage01() {
     <div>
       <div>Hello</div>
       <div>It's me</div>
+      <div>Third Page</div>
     </div>
   );
 }

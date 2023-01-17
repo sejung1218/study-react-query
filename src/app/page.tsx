@@ -1,14 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/router";
-// import { useRouter } from "next/navigation";
+// import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import styled from "styled-components";
+// import router from next/router 는 동작하지 않는다.
+// const router = useRouter(); 작성 후, useRouter를 next/navigation 에서 import.
+// 자동완성 및 빠른수정은 되지 않는다. 이유가 뭘까?
 
 export default function Home() {
   const router = useRouter();
   const onClickMoveFirstPage = async () => {
-    router.push(`/test`);
+    router.push(`/test01`);
   };
 
   return (
@@ -17,12 +20,13 @@ export default function Home() {
         <SubOneDiv>
           <SubManyDiv01 onClick={onClickMoveFirstPage}>First Page</SubManyDiv01>
           {/* 안되는 이유가 뭘까? */}
-          {/* <SubManyDiv01 onClick={() => router.push(`/test`)}>
+
+          <SubManyDiv01 onClick={() => router.push(`/test02`)}>
             Second Page
-          </SubManyDiv01> */}
+          </SubManyDiv01>
 
           <SubManyDiv01>
-            <ClearLink href="/test">Third Page</ClearLink>
+            <ClearLink href="/test03">Third Page</ClearLink>
           </SubManyDiv01>
         </SubOneDiv>
         <SubTwoDiv>
@@ -89,6 +93,7 @@ const SubManyDiv01 = styled.div`
   background-color: black;
   color: white;
   box-sizing: border-box;
+  cursor: pointer;
 
   :first-of-type {
     border-right: 1px solid white;
@@ -111,4 +116,9 @@ const SubManyDiv02 = styled.div`
 const ClearLink = styled(Link)`
   text-decoration: none;
   color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
