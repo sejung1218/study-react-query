@@ -1,12 +1,29 @@
 "use client";
+
+import Link from "next/link";
+import { useRouter } from "next/router";
+// import { useRouter } from "next/navigation";
 import styled from "styled-components";
 
 export default function Home() {
+  const router = useRouter();
+  const onClickMoveFirstPage = async () => {
+    router.push(`/test`);
+  };
+
   return (
     <FullDiv>
       <MainDiv>
         <SubOneDiv>
-          <SubManyDiv01>First Page</SubManyDiv01>
+          <SubManyDiv01 onClick={onClickMoveFirstPage}>First Page</SubManyDiv01>
+          {/* 안되는 이유가 뭘까? */}
+          {/* <SubManyDiv01 onClick={() => router.push(`/test`)}>
+            Second Page
+          </SubManyDiv01> */}
+
+          <SubManyDiv01>
+            <ClearLink href="/test">Third Page</ClearLink>
+          </SubManyDiv01>
         </SubOneDiv>
         <SubTwoDiv>
           <SubManyDiv02>1</SubManyDiv02>
@@ -71,6 +88,15 @@ const SubManyDiv01 = styled.div`
   align-items: center;
   background-color: black;
   color: white;
+  box-sizing: border-box;
+
+  :first-of-type {
+    border-right: 1px solid white;
+  }
+
+  :last-of-type {
+    border-left: 1px solid white;
+  }
 `;
 
 const SubManyDiv02 = styled.div`
@@ -80,4 +106,9 @@ const SubManyDiv02 = styled.div`
   height: 50%;
   justify-content: center;
   align-items: center;
+`;
+
+const ClearLink = styled(Link)`
+  text-decoration: none;
+  color: white;
 `;
