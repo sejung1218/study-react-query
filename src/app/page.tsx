@@ -22,16 +22,19 @@ export default function Home() {
 }
 
 const FullDiv = styled.div`
-  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  box-sizing: border-box;
   width: 100%;
-  height: 100vh;
+  height: 98vh;
   display: flex;
   justify-content: center; // 가로 중앙 정렬
   align-items: center; // 세로 중앙 정렬
 `;
 
 const MainDiv = styled.div`
-  border: 1px solid white;
+  border: 1px solid black;
   width: 50%;
   height: 50%;
   display: flex;
@@ -40,7 +43,7 @@ const MainDiv = styled.div`
 `;
 
 const SubOneDiv = styled.div`
-  border: 1px solid white;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +52,7 @@ const SubOneDiv = styled.div`
 `;
 
 const SubTwoDiv = styled.div`
-  border: 1px solid white;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,16 +63,18 @@ const SubTwoDiv = styled.div`
 `;
 
 const SubManyDiv01 = styled.div`
-  border: 1px solid white;
+  border: 1px solid black;
   width: 98%;
   height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  color: white;
 `;
 
 const SubManyDiv02 = styled.div`
-  border: 1px solid white;
+  border: 1px solid black;
   display: flex;
   width: 10%;
   height: 50%;
