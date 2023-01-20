@@ -7,17 +7,19 @@ export function Example() {
     )
   );
 
-  // if (isLoading) return "Loading...";
+  console.log("repoData : ", data?.repoData);
 
-  // if (error) return "An error has occurred: " + error.message;
+  if (isLoading) return "Loading...";
+
+  if (error) return "An error has occurred: " + error;
 
   return (
     <div>
-      <h1>{data.name}</h1>
-      <p>{data.description}</p>
-      <strong>👀 {data.subscribers_count}</strong>{" "}
-      <strong>✨ {data.stargazers_count}</strong>{" "}
-      <strong>🍴 {data.forks_count}</strong>
+      <h1>{data?.name}</h1>
+      <p>{data?.description}</p>
+      <strong>👀 {data?.subscribers_count}</strong>{" "}
+      <strong>✨ {data?.stargazers_count}</strong>{" "}
+      <strong>🍴 {data?.forks_count}</strong>
     </div>
   );
 }
