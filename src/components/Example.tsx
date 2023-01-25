@@ -33,7 +33,7 @@ export function Example() {
       <strong>👀 {data?.subscribers_count}</strong>{" "}
       <strong>✨ {data?.stargazers_count}</strong>{" "}
       <strong>🍴 {data?.forks_count}</strong> */}
-      <div>TEST</div>
+      <div>TEST 페이지 01</div>
     </div>
   );
 }
