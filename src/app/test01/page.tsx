@@ -8,6 +8,7 @@ export default function TestPage01() {
   return (
     <QueryClientProvider client={queryClient}>
       <Example />
+      <Example />
     </QueryClientProvider>
   );
 }
