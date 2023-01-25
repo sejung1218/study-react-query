@@ -1,18 +1,18 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useQuery } from "react-query";
 
-export function TestReactQuery02() {
+// Use Axios
+export async function TestReactQuery02() {
   //axios사용시
+  const data = await axios
+    .get("https://api.bonobono.dev/api/v1/post", {
+      params: { boardType: "TYPE_NOTICE", page: 0 },
+    })
+    .then((res) => res);
+
   useEffect(() => {
-    const data = axios
-      .get("https://api.bonobono.dev/api/v1/post", {
-        params: { boardType: "TYPE_NOTICE", page: 0 },
-      })
-      .then((res) => res);
-    console.log("testReactQuery02 입니다.");
-    console.log("data : ", data);
-  }, []);
+    console.log("data02 : ", data);
+  }, [data]);
 
   return (
     <div>

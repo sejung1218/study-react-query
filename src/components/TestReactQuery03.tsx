@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 
+// Use Fetch
 export async function TestReactQuery03() {
   //내장 fetch 사용시
   const data = await fetch(

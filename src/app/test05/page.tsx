@@ -9,8 +9,8 @@ export default function TestPage01() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <TestReactQuery01 />
-      {/* <TestReactQuery02 /> */}
+      {/* <TestReactQuery01 /> */}
+      <TestReactQuery02 />
       {/* <TestReactQuery03 /> */}
     </QueryClientProvider>
   );
