@@ -10,7 +10,8 @@ export function TestReactQuery02() {
         params: { boardType: "TYPE_NOTICE", page: 0 },
       })
       .then((data) => {
-        console.log(data.data);
+        // console.log("data02 : ", data);
+        console.log("data02 : ", data?.data.data.content);
       })
       .catch((err) => {
         console.log(err);
