@@ -2,17 +2,37 @@ import axios from "axios";
 import { useEffect } from "react";
 
 // Use Axios
-export async function TestReactQuery02() {
+export function TestReactQuery02() {
   //axios사용시
-  const data = await axios
-    .get("https://api.bonobono.dev/api/v1/post", {
-      params: { boardType: "TYPE_NOTICE", page: 0 },
-    })
-    .then((res) => res);
-
   useEffect(() => {
-    console.log("data02 : ", data);
-  }, [data]);
+    axios
+      .get("https://api.bonobono.dev/api/v1/post", {
+        params: { boardType: "TYPE_NOTICE", page: 0 },
+      })
+      .then((data) => {
+        console.log(data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    // const fetchUsers = async () => {
+    //   try {
+    //     const data = axios.get("https://api.bonobono.dev/api/v1/post", {
+    //       params: { boardType: "TYPE_NOTICE", page: 0 },
+    //     });
+    //     // .then((res) => res);
+    //     console.log("data02 : ", data);
+    //   } catch (e) {
+    //     console.log(e);
+    //   }
+
+    //   fetchUsers();
+    // };
+  }, []);
+
+  // useEffect(() => {
+  //   console.log("data02 : ", data);
+  // }, [data]);
 
   return (
     <div>
