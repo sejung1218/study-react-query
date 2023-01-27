@@ -13,7 +13,7 @@ export default function TestPage01() {
   // TestReactQuery01 complete
   // TestReactQuery02 complete
   // TestReactQuery02_01 complete
-  // TestReactQuery02_02 fail
+  // TestReactQuery02_02 complete
   // TestReactQuery03 fail
 
   return (
@@ -21,8 +21,8 @@ export default function TestPage01() {
       {/* <TestReactQuery01 /> */}
       {/* <TestReactQuery02 /> */}
       {/* <TestReactQuery02_01 /> */}
-      <TestReactQuery02_02 />
-      {/* <TestReactQuery03 /> */}
+      {/* <TestReactQuery02_02 /> */}
+      <TestReactQuery03 />
     </QueryClientProvider>
   );
 }
