@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export function TestReactQuery02_01() {
   //axios사용시
   useEffect(() => {
-    const data = axios
+    const detaildata = axios
       .get("https://api.bonobono.dev/api/v1/post", {
         params: { boardType: "TYPE_NOTICE", page: 0 },
       })
@@ -22,7 +22,7 @@ export function TestReactQuery02_01() {
     // 지금은 promise를 통해서 then method 체이닝
     // get <- promise 함수
     // console.log("data02_01 : ", data);
-  });
+  }, []);
 
   return (
     <div>

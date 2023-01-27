@@ -9,12 +9,19 @@ import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 
 export default function TestPage01() {
   const queryClient = new QueryClient();
+
+  // TestReactQuery01 complete
+  // TestReactQuery02 complete
+  // TestReactQuery02_01 complete
+  // TestReactQuery02_02 fail
+  // TestReactQuery03 fail
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* <TestReactQuery01 /> */}
       {/* <TestReactQuery02 /> */}
-      <TestReactQuery02_01 />
-      {/* <TestReactQuery02_02 /> */}
+      {/* <TestReactQuery02_01 /> */}
+      <TestReactQuery02_02 />
       {/* <TestReactQuery03 /> */}
     </QueryClientProvider>
   );
