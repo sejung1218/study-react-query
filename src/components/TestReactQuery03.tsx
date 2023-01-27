@@ -1,5 +1,3 @@
-import { useQuery } from "react-query";
-
 // Use Fetch
 export async function TestReactQuery03() {
   //내장 fetch 사용시
@@ -10,7 +8,7 @@ export async function TestReactQuery03() {
     }
   ).then((res) => res.json());
 
-  console.log("boardData : ", data);
+  console.log("data03 : ", data);
 
   return (
     <div>

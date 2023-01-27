@@ -11,7 +11,7 @@ export function TestReactQuery02() {
       })
       .then((data) => {
         // console.log("data02 : ", data);
-        console.log("data02 : ", data?.data.data.content);
+        console.log("data02_00 : ", data?.data.data.content);
       })
       .catch((err) => {
         console.log(err);
