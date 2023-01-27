@@ -14,7 +14,7 @@ export default function TestPage01() {
   // TestReactQuery02 complete
   // TestReactQuery02_01 complete
   // TestReactQuery02_02 complete
-  // TestReactQuery03 fail
+  // TestReactQuery03 complete
 
   return (
     <QueryClientProvider client={queryClient}>
