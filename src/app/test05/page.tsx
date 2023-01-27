@@ -13,9 +13,9 @@ export default function TestPage01() {
     <QueryClientProvider client={queryClient}>
       {/* <TestReactQuery01 /> */}
       {/* <TestReactQuery02 /> */}
-      {/* <TestReactQuery02_01 /> */}
+      <TestReactQuery02_01 />
       {/* <TestReactQuery02_02 /> */}
-      <TestReactQuery03 />
+      {/* <TestReactQuery03 /> */}
     </QueryClientProvider>
   );
 }
