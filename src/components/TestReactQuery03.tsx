@@ -20,6 +20,7 @@ export function TestReactQuery03() {
   //내장 fetch 사용시
 
   // console.log("data03 : ", data);
+  //
 
   return (
     <div>
