@@ -1,5 +1,9 @@
 import { useQuery } from "react-query";
 
+const headRows: {
+  name: string;
+}[] = [{ name: "1" }, { name: "2" }, { name: "3" }, { name: "4" }];
+
 export function Example() {
   // const { isLoading, error, data } = useQuery("repoData", () =>
   //   fetch("https://api.github.com/repos/tannerlinsley/react-query").then(
@@ -9,13 +13,15 @@ export function Example() {
   const { isLoading, error, data } = useQuery(
     ["boardData", { boardType: "TYPE_NOTICE", page: 1 }],
     () =>
-      fetch("https://api.bonobono.dev/api/v1/post", { method: "get" }).then(
-        (res) => res.json()
-      )
+      fetch(
+        "https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0",
+        { method: "get" }
+      ).then((res) => res.json())
   );
 
-  // console.log("repoData : ", data?.repoData);
-  console.log("data : ", data);
+  const detailData = data?.data.content; // console.log("repoData : ", data?.repoData);
+  // console.log("data : ", data?.data.content);
+  console.log("detailData : ", detailData);
 
   // if (isLoading) return "Loading...";
   // if (isLoading) return <div>"Loading...";</div>;
@@ -34,6 +40,25 @@ export function Example() {
       <strong>✨ {data?.stargazers_count}</strong>{" "}
       <strong>🍴 {data?.forks_count}</strong> */}
       <div>TEST 페이지 01</div>
+      <table border={1}>
+        <thead>
+          <tr>
+            {headRows.map(({ name }: { name: string }) => (
+              <th>{name}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {data?.data.content.map((data: any) => (
+            <tr key={data.id}>
+              <td>{data?.seq}</td>
+              <td>{data?.username}</td>
+              <td>{data?.createdDtimeYmd}</td>
+              <td>{data?.regIp}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
