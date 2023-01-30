@@ -40,6 +40,7 @@ export function Example() {
       <strong>✨ {data?.stargazers_count}</strong>{" "}
       <strong>🍴 {data?.forks_count}</strong> */}
       <div>TEST 페이지 01</div>
+      <div>CN LMS notice board</div>
       <table border={1}>
         <thead>
           <tr>
