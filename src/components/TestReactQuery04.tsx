@@ -2,6 +2,10 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useQuery } from "react-query";
 
+const headRows: {
+  name: string;
+}[] = [{ name: "1" }, { name: "2" }, { name: "3" }, { name: "4" }];
+
 // reactQuery + axios
 export function TestReactQuery04() {
   const TestReactQuery = useQuery("boardData", () =>
@@ -26,11 +30,26 @@ export function TestReactQuery04() {
 
   return (
     <div>
-      <div>TEST 페이지 05-04</div>
-      {/* {boardData.content.map((item) => (
-        <div></div>
-      ))} */}
-      <div></div>
+      <div>CN LMS notice board</div>
+      <table border={1}>
+        <thead>
+          <tr>
+            {headRows.map(({ name }: { name: string }) => (
+              <th>{name}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {TestReactQuery?.data?.data.data.content.map((data: any) => (
+            <tr key={data.id}>
+              <td>{data?.seq}</td>
+              <td>{data?.username}</td>
+              <td>{data?.createdDtimeYmd}</td>
+              <td>{data?.regIp}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
