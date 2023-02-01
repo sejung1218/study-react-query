@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 
 const headRows: {
   name: string;
-}[] = [{ name: "1" }, { name: "2" }, { name: "3" }, { name: "4" }];
+}[] = [{ name: "seq" }, { name: "ID" }, { name: "생성일" }, { name: "IP" }];
 
 // reactQuery + axios
 export function TestReactQuery04() {
@@ -12,7 +12,7 @@ export function TestReactQuery04() {
     axios
       .get("https://api.bonobono.dev/api/v1/post", {
         method: "get",
-        params: { boardType: "TYPE_NOTICE", page: 0 },
+        params: { boardType: "TYPE_NOTICE", page: 0, elementCnt: 25 },
       })
       // .then((data) => console.log("inner data : ", data?.data.data.content))
       .then((data) => data)
