@@ -16,11 +16,11 @@ export function TestReactQuery03() {
       console.log(res);
     }
     fetchData();
+    console.log('fetchData : ', fetchData);
   }, []);
   //내장 fetch 사용시
 
   // console.log("data03 : ", data);
-  // c
 
   return (
     <div>
