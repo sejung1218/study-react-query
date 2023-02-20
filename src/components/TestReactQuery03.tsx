@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 // Use Fetch
 export function TestReactQuery03() {
@@ -6,9 +6,9 @@ export function TestReactQuery03() {
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(
-        "https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0",
+        'https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0',
         {
-          method: "get",
+          method: 'get',
         }
       ).then((res) => res.json());
       // ).then((res) => console.log(res));
@@ -20,7 +20,7 @@ export function TestReactQuery03() {
   //내장 fetch 사용시
 
   // console.log("data03 : ", data);
-  //
+  // c
 
   return (
     <div>
