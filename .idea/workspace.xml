@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f592e6ea-857e-43b2-8322-72afdeace28b" name="변경" comment="" />
+    <list default="true" id="f592e6ea-857e-43b2-8322-72afdeace28b" name="변경" comment="Web Storm Setting">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6e317583-e700-47f4-b8a4-900dbb030b3e" />
+        <option name="url" value="https://github.com/sejung1218/study-react-query.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -25,6 +44,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindow서비스.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/GW/Desktop/LSJ_code/0. 개인공부/study-react-query",
     "node.js.detected.package.eslint": "true",
@@ -32,7 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.TypeScript",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
     "ts.external.directory.path": "C:\\Users\\GW\\Desktop\\LSJ_code\\0. 개인공부\\study-react-query\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,11 +67,36 @@
       <updated>1677142008853</updated>
       <workItem from="1677142009920" duration="14000" />
       <workItem from="1677213747317" duration="580000" />
-      <workItem from="1677214335345" duration="1969000" />
+      <workItem from="1677214335345" duration="2342000" />
+      <workItem from="1677217092109" duration="358000" />
+      <workItem from="1677464385877" duration="15000" />
     </task>
+    <task id="LOCAL-00001" summary="Web Storm Setting">
+      <created>1677216841397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677216841397</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Web Storm Setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web Storm Setting" />
   </component>
 </project>
