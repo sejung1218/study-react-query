@@ -19,6 +19,7 @@ export function Example() {
       ).then((res) => res.json())
   );
 
+  // TODO : post?boardType=TYPE_NOTICE&page=0 이런거 말고 파라미터로 넣는법 체크
   const detailData = data?.data.content; // console.log("repoData : ", data?.repoData);
   // console.log("data : ", data?.data.content);
   console.log("detailData : ", detailData);
