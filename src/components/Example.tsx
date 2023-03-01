@@ -10,14 +10,57 @@ export function Example() {
   //     (res) => res.json()
   //   )
   // );
-  const { isLoading, error, data } = useQuery(
-    ["boardData", { boardType: "TYPE_NOTICE", page: 0 }],
-    () =>
-      fetch(
-        "https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0",
-        { method: "get" }
-      ).then((res) => res.json())
+  // const { isLoading, error, data } = useQuery(
+  //   ["boardData", { boardType: "TYPE_NOTICE", page: 0 }],
+  //   () =>
+  //     fetch(
+  //       // "https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0",
+  //       "https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0",
+  //       { method: "get" }
+  //     ).then((res) => res.json())
+  // );
+
+  // const { data, error, isLoading } = useQuery(["boardData", {boardType: "TYPE_NOTICE", page: 0}],
+  //   () => fetch(`https://api.bonobono.dev/api/v1/post?boardType=${boardType}&page=${page}`).then((res) => res.json()));
+
+  // const { data, isLoading, error } = useQuery(
+  //   [{boardType: "TYPE_NOTICE"},{page: 0} ],
+  //   async () => {
+  //     const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${boardType}&page=${page}`);
+  //     return response.json();
+  //   }
+  // );
+
+  // const { data, isLoading, error } = useQuery(
+  //   ['boardData', { boardType: "TYPE_NOTICE", page: 0 }],
+  //   async ({ queryKey }) => {
+  //     const ['boardData', { boardType: "TYPE_NOTICE", page: 0 }] = queryKey;
+  //     const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${queryParams.boardType}&page=${queryParams.page}`);
+  //     return response.json();
+  //   }
+  // );
+
+  // const { data, isLoading, error } = useQuery(
+  //   ['boardData', { boardType: "TYPE_NOTICE", page: 0 }],
+  //   async ({ queryKey }) => {
+  //     const ['boardData', queryParams] = queryKey;
+  //     const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${queryParams.boardType}&page=${queryParams.page}`);
+  //     return response.json();
+  //   }
+  // );
+
+  const { data, isLoading, error } = useQuery(
+    ['boardData', { boardType: "TYPE_NOTICE", page: 0 }],
+    async ({ queryKey }) => {
+      const queryParams = queryKey[1];
+      const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${queryParams.boardType}&page=${queryParams.page}`);
+      return response.json();
+    }
   );
+
+
+
+  console.log("새로 만든 data -> ", data)
 
   // TODO : post?boardType=TYPE_NOTICE&page=0 이런거 말고 파라미터로 넣는법 체크
   const detailData = data?.data.content; // console.log("repoData : ", data?.repoData);
@@ -46,7 +89,7 @@ export function Example() {
         <thead>
           <tr>
             {headRows.map(({ name }: { name: string }) => (
-              <th>{name}</th>
+              <th key={name}>{name}</th>
             ))}
           </tr>
         </thead>
