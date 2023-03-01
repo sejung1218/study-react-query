@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8a88d46-3a3a-4f36-9daf-1ca089990355" name="변경" comment="Commit Test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a8a88d46-3a3a-4f36-9daf-1ca089990355" name="변경" comment="Fix workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677641246905</updated>
       <workItem from="1677641247965" duration="5026000" />
-      <workItem from="1677650436951" duration="326000" />
+      <workItem from="1677650436951" duration="382000" />
     </task>
     <task id="LOCAL-00001" summary="Test react-query QueryKey 01">
       <created>1677643150817</created>
@@ -133,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677650457781</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix workspace.xml">
+      <created>1677650811320</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677650811320</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +151,7 @@
     <MESSAGE value="Test react-query QueryKey 04" />
     <MESSAGE value="Change Repository" />
     <MESSAGE value="Commit Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Test" />
+    <MESSAGE value="Fix workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix workspace.xml" />
   </component>
 </project>
