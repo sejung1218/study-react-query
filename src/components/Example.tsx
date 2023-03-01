@@ -70,7 +70,8 @@ export function Example() {
     }
   );
 
-  console.log("게시판 data -> ", data)
+  // console.log("게시판 data -> ", data)
+  console.log("게시판 data -> ", data?.data.content)
 
 
   // TODO : post?boardType=TYPE_NOTICE&page=0 이런거 말고 파라미터로 넣는법 체크
