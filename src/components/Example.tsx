@@ -1,4 +1,5 @@
 import { useQuery } from "react-query";
+import {useState} from "react";
 
 const headRows: {
   name: string;
@@ -42,30 +43,40 @@ export function Example() {
 
   // const { data, isLoading, error } = useQuery(
   //   ['boardData', { boardType: "TYPE_NOTICE", page: 0 }],
+  //   async () => {
+  //     const response = await fetch(`https://api.bonobono.dev/api/v1/post`);
+  //     return response.json();
+  //   }
+  // );
+
+
+  // const { data, isLoading, error } = useQuery(
+  //   ['boardData', { boardType: "TYPE_NOTICE", page: 0 }],
   //   async ({ queryKey }) => {
-  //     const ['boardData', queryParams] = queryKey;
+  //     const queryParams = queryKey[1];
   //     const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${queryParams.boardType}&page=${queryParams.page}`);
   //     return response.json();
   //   }
   // );
 
+  const [boardType, setBoardType] = useState("TYPE_NOTICE");
+  const [page, setPage] = useState(0);
+
   const { data, isLoading, error } = useQuery(
-    ['boardData', { boardType: "TYPE_NOTICE", page: 0 }],
-    async ({ queryKey }) => {
-      const queryParams = queryKey[1];
-      const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${queryParams.boardType}&page=${queryParams.page}`);
+    ["boardData", { boardType, page }],
+    async () => {
+      const response = await fetch(`https://api.bonobono.dev/api/v1/post?boardType=${boardType}&page=${page}`);
       return response.json();
     }
   );
 
+  console.log("게시판 data -> ", data)
 
-
-  console.log("새로 만든 data -> ", data)
 
   // TODO : post?boardType=TYPE_NOTICE&page=0 이런거 말고 파라미터로 넣는법 체크
-  const detailData = data?.data.content; // console.log("repoData : ", data?.repoData);
+  // const detailData = data?.data.content; // console.log("repoData : ", data?.repoData);
   // console.log("data : ", data?.data.content);
-  console.log("detailData : ", detailData);
+  // console.log("detailData : ", detailData);
 
   // if (isLoading) return "Loading...";
   // if (isLoading) return <div>"Loading...";</div>;
