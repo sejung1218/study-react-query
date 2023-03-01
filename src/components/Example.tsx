@@ -11,7 +11,7 @@ export function Example() {
   //   )
   // );
   const { isLoading, error, data } = useQuery(
-    ["boardData", { boardType: "TYPE_NOTICE", page: 1 }],
+    ["boardData", { boardType: "TYPE_NOTICE", page: 0 }],
     () =>
       fetch(
         "https://api.bonobono.dev/api/v1/post?boardType=TYPE_NOTICE&page=0",
